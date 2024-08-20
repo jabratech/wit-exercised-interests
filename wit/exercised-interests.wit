@@ -1,0 +1,7 @@
+interface exercised-interests-handler {
+  use jabratech:common/types.{response-error,currency};
+  use types.{exercised-interests-response};
+
+  get:  func(user-email:string, currency: currency, counterparty: list<string>, current-spot: f64) -> result<exercised-interests-response, response-error>;
+  
+}

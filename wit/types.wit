@@ -1,0 +1,24 @@
+interface types {
+    use jabratech:common/types.{greeks};
+
+    record position{
+        counterparty: string,
+        pnl-description: string,
+        amount-in-base: f64,
+        pnl: f64,
+        delta: f64,    
+        currency: string,
+    }
+    record exercised-interests{
+        total-delta: f64,
+        pnl: f64,
+        positions: list<position>
+    }
+
+    record exercised-interests-response{
+        code: s16,
+        message: string,
+        data: exercised-interests
+    }
+
+}

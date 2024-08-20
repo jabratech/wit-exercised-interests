@@ -1,0 +1,5 @@
+package jabratech:exercised-interests;
+
+world exercised-interests {
+    export exercised-interests-handler;
+}
